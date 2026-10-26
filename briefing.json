@@ -1,30 +1,32 @@
 {
-  "date": "2026-10-26",
+  "date": "2026-10-27",
   "overnight": [
-    "미국 증시 휴장 (주말)",
-    "오전 5시 기준 비트코인 $80,400대 · 이더리움 $2,340대 · 24시간 큰 변동 없음",
-    "트럼프 '이란과 합의냐 공격이냐 결정할 때 다가와' · 25일엔 공습 없다고 밝힘",
-    "청와대, 가상자산 과세(2027년 1월 시행 예정) 네 번째 유예 가닥 · 공식 결정 전"
+    "미국 증시: 나스닥 +0.8% · S&P500 +0.7% · 다우 +0.3%",
+    "앤트로픽 나스닥 상장 신청에 반도체주 강세 · 필라델피아 반도체지수 +2.8%",
+    "오전 5시 기준 비트코인 $79,800대 (−0.7%) · 이더리움 $2,310대 (−1.4%)",
+    "달러/원 1,323.1원 (10/26 종가) · 미 10년물 4.99%",
+    "사우디 국방장관 이란 방문에 긴장 완화 기대 · 국제유가 하락",
+    "브라질 룰라 재선에 보베스파 −13.9% · 헤알화 급락"
   ],
   "schedule": [
-    {"when": "10/27 (화)", "what": "한국 3분기 GDP 속보치", "impact": 2, "why": "주요 지표, 과거 영향은 재지 않음"},
-    {"when": "10/28 (수)", "what": "미국 FOMC 기준금리 결정", "impact": 4, "why": "과거 발표 날 미국 주식 변동 평소의 1.4배"},
-    {"when": "10/28 (수)", "what": "마이크로소프트 · 구글 실적", "impact": 4, "why": "과거 발표 다음 날 미국 주식 변동 평소의 1.3배"},
-    {"when": "10/29 (목)", "what": "아마존 실적", "impact": 4, "why": "과거 발표 다음 날 미국 주식 변동 평소의 1.3배"},
-    {"when": "11/02 (월)", "what": "애플 실적", "impact": 4, "why": "과거 발표 다음 날 미국 주식 변동 평소의 1.3배"},
-    {"when": "11/03 (화)", "what": "미국 중간선거", "impact": 5, "why": "과거 개표 다음 날 미국 주식 변동 평소의 2.9배"},
-    {"when": "11/06 (금)", "what": "미국 10월 고용 (비농업)", "impact": 4, "why": "과거 발표 날 미 국채금리 변동 평소의 1.45배"}
+    {"when": "10/27 (화) 08:00", "what": "한국 3분기 GDP 속보치", "impact": 2, "why": "주요 지표, 과거 영향은 재지 않음"},
+    {"when": "10/28 (수) 09:00", "what": "SK하이닉스 3분기 실적 (컨퍼런스콜)", "impact": 3, "why": "반도체 대형주 실적, 과거 영향은 재지 않음"},
+    {"when": "10/29 (목) 03:00", "what": "미국 FOMC 기준금리 결정", "impact": 4, "why": "과거 발표 날 미국 주식 변동 평소의 1.4배"},
+    {"when": "10/29 (목) 05시쯤", "what": "마이크로소프트 · 구글 실적", "impact": 4, "why": "과거 발표 다음 날 미국 주식 변동 평소의 1.3배"},
+    {"when": "10/30 (금) 05시쯤", "what": "아마존 실적", "impact": 4, "why": "과거 발표 다음 날 미국 주식 변동 평소의 1.3배"},
+    {"when": "11/03 (화) 06시쯤", "what": "애플 실적", "impact": 4, "why": "과거 발표 다음 날 미국 주식 변동 평소의 1.3배"},
+    {"when": "11/04 (수) 오전", "what": "미국 중간선거 개표", "impact": 5, "why": "과거 개표 다음 날 미국 주식 변동 평소의 2.9배"}
   ],
   "sources": [
-    "https://www.tokenpost.kr/news/briefing/427226",
-    "https://www.blockmedia.co.kr/archives/1155922",
-    "https://www.newspim.com/news/view/20261026000006",
-    "https://www.hankyung.com/article/2026102532647",
-    "https://www.bok.or.kr/portal/stats/statsPublictSchdul/listCldr.do?menuNo=200775",
-    "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
-    "https://news.microsoft.com/source/2026/10/07/microsoft-announces-quarterly-earnings-release-date-69/",
-    "https://abc.xyz/investor/news/news-details/2026/Alphabet-Announces-Date-of-Third-Quarter-2026-Financial-Results-Conference-Call-2026-8tpGZsLS6v/default.aspx",
-    "https://ir.aboutamazon.com/events/event-details/2026/Q3-2026-Amazoncom-Inc-Earnings-Conference-Call/default.aspx",
-    "https://www.bls.gov/schedule/news_release/empsit.htm"
+    "https://www.mt.co.kr/world/2026/10/27/2026102705571284279",
+    "https://www.news1.kr/world/international-economy/6332590",
+    "https://www.coindesk.com/price/ethereum",
+    "https://www.tokenpost.kr/news/briefing/427690",
+    "https://bloomingbit.io/feed/news/122977",
+    "https://www.mt.co.kr/economy/2026/10/26/2026102615362391860",
+    "https://www.tokenpost.kr/news/insights/427404",
+    "https://www.news1.kr/world/international-economy/6332586",
+    "https://www.riotimesonline.com/brazil-stocks-close-down-13-9-percent-lula-win-2026/",
+    "https://news1.kr/world/international-economy/6332592"
   ]
 }
