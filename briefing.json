@@ -1,32 +1,32 @@
 {
-  "date": "2026-10-27",
+  "date": "2026-10-28",
   "overnight": [
-    "미국 증시: 나스닥 +0.8% · S&P500 +0.7% · 다우 +0.3%",
-    "앤트로픽 나스닥 상장 신청에 반도체주 강세 · 필라델피아 반도체지수 +2.8%",
-    "오전 5시 기준 비트코인 $79,800대 (−0.7%) · 이더리움 $2,310대 (−1.4%)",
-    "달러/원 1,323.1원 (10/26 종가) · 미 10년물 4.99%",
-    "사우디 국방장관 이란 방문에 긴장 완화 기대 · 국제유가 하락",
-    "브라질 룰라 재선에 보베스파 −13.9% · 헤알화 급락"
+    "미국 증시: 나스닥 +1.2% · S&P500 +0.6% · 다우 보합",
+    "앤트로픽 관련 630억 달러 금융 소식에 반도체주 강세 · 필라델피아 반도체지수 +3.6%",
+    "보잉, 737맥스 증산 2027년 하반기로 늦춰 주가 급락",
+    "오전 5시쯤 비트코인 약 $80,700 (+1.1%) · 이더리움 $2,340대 (+1.4%)",
+    "달러/원 1,323.7원 (10/27 종가) · 미 10년물 4.99%대",
+    "중동 평화 회담 기대에 국제유가 하락 · WTI $99.90 (−1.8%)"
   ],
   "schedule": [
-    {"when": "10/27 (화) 08:00", "what": "한국 3분기 GDP 속보치", "impact": 2, "why": "주요 지표, 과거 영향은 재지 않음"},
     {"when": "10/28 (수) 09:00", "what": "SK하이닉스 3분기 실적 (컨퍼런스콜)", "impact": 3, "why": "반도체 대형주 실적, 과거 영향은 재지 않음"},
     {"when": "10/29 (목) 03:00", "what": "미국 FOMC 기준금리 결정", "impact": 4, "why": "과거 발표 날 미국 주식 변동 평소의 1.4배"},
     {"when": "10/29 (목) 05시쯤", "what": "마이크로소프트 · 구글 실적", "impact": 4, "why": "과거 발표 다음 날 미국 주식 변동 평소의 1.3배"},
+    {"when": "10/29 (목) 10:00", "what": "삼성전자 3분기 실적 (컨퍼런스콜)", "impact": 3, "why": "반도체 대형주 실적, 과거 영향은 재지 않음"},
+    {"when": "10/29 (목) 21:30", "what": "미국 3분기 GDP 속보치 · 9월 PCE 물가", "impact": 2, "why": "주요 지표, 과거 발표 날 움직임 평소와 비슷"},
     {"when": "10/30 (금) 05시쯤", "what": "아마존 실적", "impact": 4, "why": "과거 발표 다음 날 미국 주식 변동 평소의 1.3배"},
-    {"when": "11/03 (화) 06시쯤", "what": "애플 실적", "impact": 4, "why": "과거 발표 다음 날 미국 주식 변동 평소의 1.3배"},
     {"when": "11/04 (수) 오전", "what": "미국 중간선거 개표", "impact": 5, "why": "과거 개표 다음 날 미국 주식 변동 평소의 2.9배"}
   ],
   "sources": [
-    "https://www.mt.co.kr/world/2026/10/27/2026102705571284279",
-    "https://www.news1.kr/world/international-economy/6332590",
-    "https://www.coindesk.com/price/ethereum",
-    "https://www.tokenpost.kr/news/briefing/427690",
-    "https://bloomingbit.io/feed/news/122977",
-    "https://www.mt.co.kr/economy/2026/10/26/2026102615362391860",
-    "https://www.tokenpost.kr/news/insights/427404",
-    "https://www.news1.kr/world/international-economy/6332586",
-    "https://www.riotimesonline.com/brazil-stocks-close-down-13-9-percent-lula-win-2026/",
-    "https://news1.kr/world/international-economy/6332592"
+    "https://www.news1.kr/world/international-economy/6334052",
+    "https://finance.yahoo.com/markets/live/stock-market-today-tuesday-october-27-dow-sp-500-nasdaq-tech-sector-160557664.html",
+    "https://biz.heraldcorp.com/article/10916846",
+    "https://www.tokenpost.kr/news/briefing/428233",
+    "https://www.blockmedia.co.kr/archives/1157221",
+    "https://www.mt.co.kr/index.php/economy/2026/10/27/2026102715384861247",
+    "https://www.news1.kr/finance/market-exr/6333624",
+    "https://www.news1.kr/world/international-economy/6334050",
+    "https://www.blockmedia.co.kr/archives/1157241",
+    "https://www.news1.kr/world/international-economy/6334044"
   ]
 }
