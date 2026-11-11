@@ -1,12 +1,12 @@
 {
-  "date": "2026-11-11",
+  "date": "2026-11-12",
   "overnight": [
-    "미국 증시: 나스닥 −0.7% · S&P500 −0.4% · 다우 −0.3%",
-    "10월 CPI 전월비 +0.4% (예상 +0.3%) · 근원 +0.3% (예상 +0.2%)",
-    "12월 금리 인상 경계감 커짐 · 월러 이사 0.5%p 인상 가능성 언급",
-    "엔비디아 −5%대 (CEO 관련 이사회 조사 여파) · 코어위브 연 전망 상향",
-    "비트코인 약 $73,500 (−2%) · 이더리움 약 $2,050 (−4%) · 11/11 06시경",
-    "달러/원 1,337.5원 (11/10 종가, 9.6원 하락) · 미 10년물 5% 안팎"
+    "미국 증시: 나스닥 +1.6% · S&P500 +1.3% · 다우 +0.5%",
+    "코어위브 +24.7% (실적 호조 · 전망 상향) · 엔비디아 +2.9% 반등",
+    "12월 금리 인상 전망 우세 지속 (CME FedWatch)",
+    "비트코인 약 $74,400 · 이더리움 약 $2,080 (11/12 05시경)",
+    "달러/원 1,333.6원 (11/11 종가) · 미 10년물 4.98% (11/10 마감)",
+    "11/11 미국 채권시장 휴장 (재향군인의 날) · 증시는 정상 거래"
   ],
   "schedule": [
     {"when": "11/13 (금) 06:30", "what": "시스코 · 어플라이드머티어리얼즈 분기 실적 발표 (컨퍼런스콜 기준)", "impact": 2, "why": "재지 않음 · 그 밖의 큰 기업 실적이라 2점"},
@@ -14,18 +14,19 @@
     {"when": "11/17 (화) 22:30", "what": "미국 10월 소매판매 발표", "impact": 1, "why": "재지 않음 · 작은 지표에 가까워 1점"},
     {"when": "11/18 (수) 07:00", "what": "엔비디아 3분기 실적 발표 (컨퍼런스콜 기준)", "impact": 3, "why": "발표 다음 날 SK하이닉스 변동 평소의 1.41배"},
     {"when": "11/19 (목) 04:00", "what": "미국 FOMC 10월 회의 의사록 공개", "impact": 2, "why": "재지 않음 · 금리 결정 아닌 의사록이라 낮게"},
-    {"when": "11/25 (수) 22:30", "what": "미국 10월 PCE (개인소비지출 물가) · 3분기 GDP 잠정치 발표", "impact": 2, "why": "주요 일정이나 그날 움직임 평소와 큰 차이 없음"}
+    {"when": "11/25 (수) 22:30", "what": "미국 10월 PCE (개인소비지출 물가) · 3분기 GDP 잠정치 발표", "impact": 2, "why": "주요 일정이나 그날 움직임 평소와 큰 차이 없음"},
+    {"when": "11/26 (목)", "what": "한국은행 금통위 기준금리 결정", "impact": 2, "why": "주요 일정이나 그날 움직임 평소와 큰 차이 없음"}
   ],
   "sources": [
-    "https://krmg.com/2026/11/10/how-major-us-stock-indexes-fared-tuesday-11-10-2026/",
-    "https://investinglive.com/stock-market-update/us-stock-market-close-hot-cpi-leads-to-a-selloff/",
-    "https://www.blockmedia.co.kr/archives/1164156",
-    "https://www.blockmedia.co.kr/archives/1164141",
-    "https://www.news1.kr/finance/market-exr/6349414",
-    "https://rollingout.com/2026/11/10/coreweave-q3-earnings-4-reasons/",
-    "https://nvidianews.nvidia.com/news/nvidia-sets-conference-call-for-third-quarter-financial-results-6928873",
-    "https://www.federalreserve.gov/newsevents/2026-november.htm",
-    "https://www.bls.gov/ppi/notices/2026/ppi-adds-deletes-october-2026.htm",
-    "https://www.bea.gov/news/schedule/2026"
+    "https://www.newspim.com/news/view/20261112000017",
+    "https://view.asiae.co.kr/article/2026111205244281253",
+    "https://finance.yahoo.com/markets/live/stock-market-today-wednesday-november-11-dow-sp-500-nasdaq-nvidia-treasurys-veterans-day-140638547.html",
+    "https://www.fnnews.com/news/202611111537427959",
+    "https://m.news.nate.com/view/20261111n26688",
+    "https://www.tokenpost.kr/news/briefing/436760",
+    "https://www.fxstreet.com/cryptocurrencies/news/ethereum-price-forecast-eth-sees-mild-gains-following-ai-stock-rebound-202611112007",
+    "https://cappnotes.substack.com/p/closing-look-tuesday-november-10",
+    "https://www.sifma.org/news/press-releases/sifma-fixed-income-market-close-recommendation-in-the-u-s-the-u-k-and-japan-for-the-u-s-veterans-day-holiday-2026",
+    "https://nvidianews.nvidia.com/news/nvidia-sets-conference-call-for-third-quarter-financial-results-6928873"
   ]
 }
