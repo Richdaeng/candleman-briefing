@@ -1,15 +1,14 @@
 {
-  "date": "2026-11-12",
+  "date": "2026-11-13",
   "overnight": [
-    "미국 증시: 나스닥 +1.6% · S&P500 +1.3% · 다우 +0.5%",
-    "코어위브 +24.7% (실적 호조 · 전망 상향) · 엔비디아 +2.9% 반등",
-    "12월 금리 인상 전망 우세 지속 (CME FedWatch)",
-    "비트코인 약 $74,400 · 이더리움 약 $2,080 (11/12 05시경)",
-    "달러/원 1,333.6원 (11/11 종가) · 미 10년물 4.98% (11/10 마감)",
-    "11/11 미국 채권시장 휴장 (재향군인의 날) · 증시는 정상 거래"
+    "미국 증시: 나스닥 −0.39% · S&P500 −0.35% · 다우 −0.36% (11/12 마감)",
+    "엔비디아 −4.34%: 젠슨 황 CEO 사임, 콜레트 크레스 CFO가 임시 CEO",
+    "유가 급등 (WTI +2.55%) · 12월 금리 인상 확률 100% (CME FedWatch)",
+    "비트코인 약 $71,600 · 이더리움 약 $2,010 (11/13 05시경, 24시간 3%대 하락)",
+    "MSCI, 스트래티지 지수 제외 확정 (11/30 마감 후 적용) · 비트코인 ETF 순유출 지속",
+    "달러/원 1,330.7원 (11/12 종가) · 4거래일 연속 하락"
   ],
   "schedule": [
-    {"when": "11/13 (금) 06:30", "what": "시스코 · 어플라이드머티어리얼즈 분기 실적 발표 (컨퍼런스콜 기준)", "impact": 2, "why": "재지 않음 · 그 밖의 큰 기업 실적이라 2점"},
     {"when": "11/13 (금) 22:30", "what": "미국 10월 PPI (생산자물가) 발표", "impact": 2, "why": "재지 않음 · PCE와 같은 물가지표라 2점"},
     {"when": "11/17 (화) 22:30", "what": "미국 10월 소매판매 발표", "impact": 1, "why": "재지 않음 · 작은 지표에 가까워 1점"},
     {"when": "11/18 (수) 07:00", "what": "엔비디아 3분기 실적 발표 (컨퍼런스콜 기준)", "impact": 3, "why": "발표 다음 날 SK하이닉스 변동 평소의 1.41배"},
@@ -18,15 +17,15 @@
     {"when": "11/26 (목)", "what": "한국은행 금통위 기준금리 결정", "impact": 2, "why": "주요 일정이나 그날 움직임 평소와 큰 차이 없음"}
   ],
   "sources": [
-    "https://www.newspim.com/news/view/20261112000017",
-    "https://view.asiae.co.kr/article/2026111205244281253",
-    "https://finance.yahoo.com/markets/live/stock-market-today-wednesday-november-11-dow-sp-500-nasdaq-nvidia-treasurys-veterans-day-140638547.html",
-    "https://www.fnnews.com/news/202611111537427959",
-    "https://m.news.nate.com/view/20261111n26688",
-    "https://www.tokenpost.kr/news/briefing/436760",
-    "https://www.fxstreet.com/cryptocurrencies/news/ethereum-price-forecast-eth-sees-mild-gains-following-ai-stock-rebound-202611112007",
-    "https://cappnotes.substack.com/p/closing-look-tuesday-november-10",
-    "https://www.sifma.org/news/press-releases/sifma-fixed-income-market-close-recommendation-in-the-u-s-the-u-k-and-japan-for-the-u-s-veterans-day-holiday-2026",
+    "https://www.newspim.com/news/view/20261113000019",
+    "https://www.news1.kr/world/international-economy/6352661",
+    "https://view.asiae.co.kr/article/2026111216152402113",
+    "https://m.news.nate.com/view/20261112n27769",
+    "https://www.tokenpost.kr/news/briefing/437348",
+    "https://www.blockmedia.co.kr/archives/1165247",
+    "https://247wallst.com/investing/2026/11/12/its-official-michael-saylors-strategy-is-out-of-the-msci-indexes/",
+    "https://nvidianews.nvidia.com/news/nvidia-announces-ceo-transition",
+    "https://www.cnbc.com/2026/11/12/us-treasurys-bonds-yields.html",
     "https://nvidianews.nvidia.com/news/nvidia-sets-conference-call-for-third-quarter-financial-results-6928873"
   ]
 }
