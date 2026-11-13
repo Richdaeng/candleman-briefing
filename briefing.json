@@ -1,31 +1,31 @@
 {
-  "date": "2026-11-13",
+  "date": "2026-11-14",
   "overnight": [
-    "미국 증시: 나스닥 −0.39% · S&P500 −0.35% · 다우 −0.36% (11/12 마감)",
-    "엔비디아 −4.34%: 젠슨 황 CEO 사임, 콜레트 크레스 CFO가 임시 CEO",
-    "유가 급등 (WTI +2.55%) · 12월 금리 인상 확률 100% (CME FedWatch)",
-    "비트코인 약 $71,600 · 이더리움 약 $2,010 (11/13 05시경, 24시간 3%대 하락)",
-    "MSCI, 스트래티지 지수 제외 확정 (11/30 마감 후 적용) · 비트코인 ETF 순유출 지속",
-    "달러/원 1,330.7원 (11/12 종가) · 4거래일 연속 하락"
+    "미국 증시: 나스닥 −0.91% · S&P500 −0.40% · 다우 +0.10% (11/13 마감)",
+    "엔비디아 −2.01% (CEO 사임 후 2일째 약세) · AMD · 브로드컴 급락",
+    "미국 10월 PPI 전월비 +0.3% (예상 +0.4%) · 전년비 +6.5% (약 4년 만의 최고)",
+    "12월 연준 금리 인상 기대 유지 · 미 10년물 금리 5%대",
+    "비트코인 약 $68,900 (−3.7%) · 이더리움 약 $1,950 (−3%대) · 24시간, 새벽 기준",
+    "달러/원 1,336.7원 (11/13 종가) · 전일 대비 +6.0원"
   ],
   "schedule": [
-    {"when": "11/13 (금) 22:30", "what": "미국 10월 PPI (생산자물가) 발표", "impact": 2, "why": "재지 않음 · PCE와 같은 물가지표라 2점"},
     {"when": "11/17 (화) 22:30", "what": "미국 10월 소매판매 발표", "impact": 1, "why": "재지 않음 · 작은 지표에 가까워 1점"},
     {"when": "11/18 (수) 07:00", "what": "엔비디아 3분기 실적 발표 (컨퍼런스콜 기준)", "impact": 3, "why": "발표 다음 날 SK하이닉스 변동 평소의 1.41배"},
+    {"when": "11/18 (수)", "what": "APEC 정상회의 개막 (중국 선전, 11/19까지)", "impact": 2, "why": "재지 않음 · 미중 회담 여부 불확실해 2점"},
     {"when": "11/19 (목) 04:00", "what": "미국 FOMC 10월 회의 의사록 공개", "impact": 2, "why": "재지 않음 · 금리 결정 아닌 의사록이라 낮게"},
     {"when": "11/25 (수) 22:30", "what": "미국 10월 PCE (개인소비지출 물가) · 3분기 GDP 잠정치 발표", "impact": 2, "why": "주요 일정이나 그날 움직임 평소와 큰 차이 없음"},
     {"when": "11/26 (목)", "what": "한국은행 금통위 기준금리 결정", "impact": 2, "why": "주요 일정이나 그날 움직임 평소와 큰 차이 없음"}
   ],
   "sources": [
-    "https://www.newspim.com/news/view/20261113000019",
-    "https://www.news1.kr/world/international-economy/6352661",
-    "https://view.asiae.co.kr/article/2026111216152402113",
-    "https://m.news.nate.com/view/20261112n27769",
-    "https://www.tokenpost.kr/news/briefing/437348",
-    "https://www.blockmedia.co.kr/archives/1165247",
-    "https://247wallst.com/investing/2026/11/12/its-official-michael-saylors-strategy-is-out-of-the-msci-indexes/",
-    "https://nvidianews.nvidia.com/news/nvidia-announces-ceo-transition",
-    "https://www.cnbc.com/2026/11/12/us-treasurys-bonds-yields.html",
-    "https://nvidianews.nvidia.com/news/nvidia-sets-conference-call-for-third-quarter-financial-results-6928873"
+    "https://www.blockmedia.co.kr/archives/1165790",
+    "https://seoul.co.kr/news/economy/2026/11/14/20261114500005",
+    "https://www.cnbc.com/2026/11/13/ppi-inflation-report-october-2026.html",
+    "https://view.asiae.co.kr/article/2026111315345800319",
+    "https://m.sedaily.com/article/20114156",
+    "https://www.tokenpost.kr/news/briefing/438073",
+    "https://www.blockmedia.co.kr/archives/1165787",
+    "https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Sets-Conference-Call-for-Third-Quarter-Financial-Results/",
+    "https://www.federalreserve.gov/newsevents/2026-november.htm",
+    "https://www.bea.gov/index.php/news/schedule/full"
   ]
 }
