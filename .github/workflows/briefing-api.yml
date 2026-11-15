@@ -1,0 +1,146 @@
+# 캔들맨 아침 경제 브리핑 — Claude API 판 (api/briefing_api.py)
+#
+# MODE (아래 env):
+#   "off"  — 예약 실행은 아무것도 안 함. 손으로 돌리기(Run workflow)만 됨.  ← 처음 상태
+#   trial  — 지금 판(Claude 클라우드 예약 작업)은 그대로 두고, API 판 결과를 api-runs 브랜치에만 올림(견주기).
+#   live   — API 판이 main 의 briefing.json 을 바꿈. 예약 작업을 멈춘 뒤에만 바꾼다.
+# 실행 기록은 모드와 상관없이 api-runs 브랜치의 logs/ 에 남는다(토큰 · 검색 수 · 검색어 · 경고, 달러 어림은 뺌).
+# 키: 저장소 Settings → Secrets and variables → Actions 의 ANTHROPIC_API_KEY (값은 로그에 안 나옴).
+# 실패하면 job 이 빨간불이 되고 GitHub 이 메일로 알린다.
+name: briefing-api
+
+on:
+  schedule:
+    - cron: "37 21 * * *"   # 매일 06:37 KST — 정각 · 30분은 GitHub 예약이 몰려 늦어지기 쉬워 피함
+    - cron: "13 22 * * *"   # 07:13 KST 다시 시도 — live 에서 오늘 것이 아직 없을 때만
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "trial = api-runs 브랜치에만 · live = main 의 briefing.json 도 바꿈"
+        type: choice
+        options: [trial, live]
+        default: trial
+      effort:
+        description: "추론 강도"
+        type: choice
+        options: [low, medium, high, xhigh, max]
+        default: high
+      max_usd:
+        description: "이번 실행의 어림 비용 상한(달러). 넘으면 더 찾지 않고 마무리"
+        default: "3.0"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: briefing-api
+  cancel-in-progress: false
+
+env:
+  MODE: "off"
+  EFFORT: high
+  MAX_USD: "3.0"
+  RUNS_BRANCH: api-runs
+
+jobs:
+  brief:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: 할지 정하기
+        id: plan
+        env:
+          EVENT: ${{ github.event_name }}
+          CRON: ${{ github.event.schedule }}
+          IN_MODE: ${{ inputs.mode }}
+          IN_EFFORT: ${{ inputs.effort }}
+          IN_MAX_USD: ${{ inputs.max_usd }}
+        run: |
+          set -eu
+          mode="$MODE"; effort="$EFFORT"; max_usd="$MAX_USD"
+          if [ "$EVENT" = workflow_dispatch ]; then mode="$IN_MODE"; effort="$IN_EFFORT"; max_usd="$IN_MAX_USD"; fi
+          case "$max_usd" in ''|*[!0-9.]*) echo "max_usd 는 숫자만"; exit 1;; esac
+          case "$mode" in off|trial|live) ;; *) echo "모드를 모름: $mode"; exit 1;; esac
+          go=1
+          if [ "$mode" = off ]; then go=0; echo "MODE=off — 예약 실행은 쉼"; fi
+          if [ "$CRON" = "13 22 * * *" ]; then
+            if [ "$mode" != live ]; then
+              go=0; echo "다시 시도는 live 때만"
+            else
+              today=$(TZ=Asia/Seoul date +%F)
+              d=$(python3 -c "import json; print(json.load(open('briefing.json', encoding='utf-8')).get('date', ''))" 2>/dev/null || true)
+              if [ "$d" = "$today" ]; then go=0; echo "오늘 것이 이미 있음 — 다시 시도 안 함"; fi
+            fi
+          fi
+          { echo "mode=$mode"; echo "effort=$effort"; echo "max_usd=$max_usd"; echo "go=$go"; } >> "$GITHUB_OUTPUT"
+          echo "모드 $mode · 강도 $effort · 실행 $go"
+
+      - uses: actions/setup-python@v6
+        if: steps.plan.outputs.go == '1'
+        with:
+          python-version: "3.12"
+
+      - name: 설치
+        if: steps.plan.outputs.go == '1'
+        run: python -m pip install --disable-pip-version-check -q -r api/requirements.txt
+
+      - name: 시험 (API 안 부름)
+        if: steps.plan.outputs.go == '1'
+        run: python -m unittest discover -s api
+
+      - name: 브리핑 만들기
+        id: brief
+        if: steps.plan.outputs.go == '1'
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          EFF: ${{ steps.plan.outputs.effort }}
+          CAP: ${{ steps.plan.outputs.max_usd }}
+        run: |
+          mkdir -p out
+          set +e
+          python api/briefing_api.py --out out/briefing_api.json --log out/run_log.json \
+            --effort "$EFF" --max-usd "$CAP" --hide-usd
+          code=$?
+          echo "code=$code" >> "$GITHUB_OUTPUT"
+          exit $code
+
+      - name: main 의 briefing.json 바꾸기 (live 일 때만)
+        if: steps.plan.outputs.go == '1' && steps.plan.outputs.mode == 'live' && steps.brief.outputs.code == '0'
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git fetch -q origin main
+          git checkout -q -B main origin/main
+          cp out/briefing_api.json briefing.json
+          git add briefing.json
+          if git diff --cached --quiet; then echo "바뀐 것 없음"; exit 0; fi
+          git commit -q -m "briefing $(TZ=Asia/Seoul date +%F)"
+          git push -q origin HEAD:main
+
+      - name: 기록 올리기 (api-runs 브랜치)
+        if: always() && steps.plan.outputs.go == '1'
+        env:
+          CODE: ${{ steps.brief.outputs.code }}
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          stamp=$(TZ=Asia/Seoul date +%F_%H%M)
+          if git ls-remote --exit-code --heads origin "$RUNS_BRANCH" >/dev/null; then
+            git fetch -q --depth=1 origin "$RUNS_BRANCH"
+            git worktree add -q --detach runs FETCH_HEAD
+          else
+            git worktree add -q --detach runs
+            git -C runs checkout -q --orphan "$RUNS_BRANCH"
+            git -C runs rm -r -f -q .
+          fi
+          mkdir -p runs/logs
+          if [ -f out/run_log.json ]; then cp out/run_log.json "runs/logs/$stamp.json"; fi
+          if [ -f out/briefing_api.json ]; then cp out/briefing_api.json runs/briefing_api.json; fi
+          git -C runs add -A
+          if git -C runs diff --cached --quiet; then echo "올릴 것 없음"; exit 0; fi
+          git -C runs commit -q -m "api 브리핑 $stamp (코드 ${CODE:-없음})"
+          git -C runs push -q origin "HEAD:refs/heads/$RUNS_BRANCH"

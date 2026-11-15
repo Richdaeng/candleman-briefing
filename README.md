@@ -20,3 +20,7 @@
 ```
 
 `impact`(1~5)는 2016~2026년 시세로 잰 표를 따릅니다. 폰이 별(★)로 그립니다.
+
+## Claude API 판 (시험 중)
+
+`api/` 폴더와 `.github/workflows/briefing-api.yml`은 같은 브리핑을 Claude API로 만드는 판입니다. 시험하는 동안은 `api-runs` 브랜치에만 쓰고 `main`의 `briefing.json`은 건드리지 않습니다. 자세한 것은 [api/README.md](api/README.md).
