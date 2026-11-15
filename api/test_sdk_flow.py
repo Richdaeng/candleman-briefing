@@ -210,7 +210,7 @@ class SdkFlowTest(unittest.TestCase):
         self.assertEqual(b1["cache_control"], {"type": "ephemeral"})
         self.assertEqual(b1["max_tokens"], 64000)
         self.assertEqual(b1["system"], self.rules)
-        self.assertEqual(b1["tools"], B.tools(30, 10))
+        self.assertEqual(b1["tools"], B.tools(30, 15))
         self.assertNotIn("tool_choice", b1)
         self.assertEqual([m["role"] for m in b2["messages"]], ["user", "assistant"])   # 새 user 없이 이어 보냄
         sent = b2["messages"][1]["content"]
@@ -300,6 +300,11 @@ class SdkFlowTest(unittest.TestCase):
         r0 = log["requests"][0]
         self.assertEqual((r0["model"], r0["iterations"], r0["fallback_ran"]), ("claude-sonnet-5-5", 2, True))
         self.assertIn("usd_iterations_sum", r0)
+        self.assertEqual(r0["iteration_tokens"],   # SDK 가 읽은 반복 객체도 종류별로 묶임
+                         {"message": {"n": 1, "input_tokens": 1500, "output_tokens": 300,
+                                      "cache_creation_input_tokens": 6000, "cache_read_input_tokens": 0},
+                          "fallback_message": {"n": 1, "input_tokens": 1700, "output_tokens": 600,
+                                               "cache_creation_input_tokens": 0, "cache_read_input_tokens": 0}})
         self.assertEqual(log["served_by"], ["claude-sonnet-5-5"])
 
     def test_http_400(self):

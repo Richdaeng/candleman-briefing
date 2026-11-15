@@ -1,8 +1,8 @@
 # 캔들맨 아침 경제 브리핑 — Claude API 판 (api/briefing_api.py)
 #
 # MODE (아래 env):
-#   "off"  — 예약 실행은 아무것도 안 함. 손으로 돌리기(Run workflow)만 됨.  ← 처음 상태
-#   trial  — 지금 판(Claude 클라우드 예약 작업)은 그대로 두고, API 판 결과를 api-runs 브랜치에만 올림(견주기).
+#   "off"  — 예약 실행은 아무것도 안 함. 손으로 돌리기(Run workflow)만 됨.
+#   trial  — 지금 판(Claude 클라우드 예약 작업)은 그대로 두고, API 판 결과를 api-runs 브랜치에만 올림(견주기).  ← 지금(11/16부터)
 #   live   — API 판이 main 의 briefing.json 을 바꿈. 예약 작업을 멈춘 뒤에만 바꾼다.
 # 실행 기록은 모드와 상관없이 api-runs 브랜치의 logs/ 에 남는다(토큰 · 검색 수 · 검색어 · 경고, 달러 어림은 뺌).
 # 키: 저장소 Settings → Secrets and variables → Actions 의 ANTHROPIC_API_KEY (값은 로그에 안 나옴).
@@ -37,7 +37,7 @@ concurrency:
   cancel-in-progress: false
 
 env:
-  MODE: "off"
+  MODE: "trial"
   EFFORT: high
   MAX_USD: "3.0"
   RUNS_BRANCH: api-runs

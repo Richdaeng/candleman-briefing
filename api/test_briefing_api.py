@@ -402,6 +402,7 @@ class FlowTest(Base):
         self.assertEqual(k0["cache_control"], {"type": "ephemeral"})
         self.assertEqual([t["type"] for t in k0["tools"]], ["web_search_20260318", "web_fetch_20260318"])
         self.assertEqual(k0["tools"][0]["max_uses"], 30)
+        self.assertEqual(k0["tools"][1]["max_uses"], 15)
         self.assertNotIn("tool_choice", k0)
         self.assertEqual(len(k0["messages"]), 1)
         k1 = client.calls[1]
@@ -527,6 +528,8 @@ class FlowTest(Base):
 
     def test_hide_usd(self):
         first, last = self.research_msgs(answer())
+        first["usage"]["iterations"] = [Obj(type="message", input_tokens=10000, output_tokens=1500,
+                                            cache_creation_input_tokens=7500, cache_read_input_tokens=0)] * 2
         client = FakeClient([first, last])
         with mock.patch("builtins.print") as p:
             code = B.run_brief(client, self.args("--hide-usd"), C, rules=B.RULES_FILE.read_text(encoding="utf-8"))
@@ -538,9 +541,29 @@ class FlowTest(Base):
         self.assertNotIn('"usd', raw)
         self.assertIn('"max_usd"', raw)          # 상한 설정값은 남김
         self.assertEqual(json.loads(raw)["totals"]["web_search_requests"], 7)
+        self.assertEqual(json.loads(raw)["totals"]["iteration_tokens"],      # 반복별 토큰은 공개 로그에도 남김
+                         {"message": {"n": 2, "input_tokens": 20000, "output_tokens": 3000,
+                                      "cache_creation_input_tokens": 15000, "cache_read_input_tokens": 0}})
 
 
 class MiscTest(Base):
+    def test_usage_iterations(self):
+        u = usage(inp=15, out=500, cw=4000, cr=3000, searches=2)
+        u["iterations"] = [
+            Obj(type="message", input_tokens=10, output_tokens=200, cache_creation_input_tokens=3000, cache_read_input_tokens=0),
+            Obj(type="message", input_tokens=5, output_tokens=300, cache_creation_input_tokens=1000, cache_read_input_tokens=3000),
+            Obj(type="compaction", input_tokens=40000, output_tokens=2000, cache_creation_input_tokens=0, cache_read_input_tokens=0)]
+        r = B.usage_of(msg([], u=u))
+        self.assertEqual(r["iterations"], 3)
+        self.assertEqual(r["iteration_tokens"]["message"], {"n": 2, "input_tokens": 15, "output_tokens": 500,
+                                                            "cache_creation_input_tokens": 4000, "cache_read_input_tokens": 3000})
+        self.assertEqual(r["iteration_tokens"]["compaction"]["n"], 1)
+        # 맨 위 $0.03066 + 검색 2번 $0.02 + compaction(맨 위에 없음) $0.2
+        self.assertEqual(r["usd"], 0.2507)
+        plain = B.usage_of(msg([]))
+        self.assertNotIn("iteration_tokens", plain)   # 반복 기록이 없으면 안 남김
+        self.assertEqual(plain["usd"], round(B.usd_of(plain), 4))
+
     def test_number_check(self):
         brief = {"overnight": ["나스닥 −0.91% · S&P500 −0.40% (11/13 마감)", "비트코인 $95,123 · 10월 PPI"]}
         r = B.number_check(brief, ["Nasdaq fell 0.91% while the S&P 500 lost 0.40%", "BTC 95123"])

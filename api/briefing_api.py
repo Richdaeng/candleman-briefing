@@ -497,6 +497,9 @@ def drop_unpaired(messages):
 
 # ── 사용량 · 비용 ───────────────────────────────────────────
 
+TOKEN_KEYS = ("input_tokens", "output_tokens", "cache_creation_input_tokens", "cache_read_input_tokens")
+
+
 def usd_of(u):
     return (u.get("input_tokens", 0) * PRICE_IN + u.get("output_tokens", 0) * PRICE_OUT
             + u.get("cache_creation_input_tokens", 0) * PRICE_CACHE_W
@@ -504,20 +507,34 @@ def usd_of(u):
         + u.get("web_search_requests", 0) * PRICE_SEARCH
 
 
+def iteration_tokens(its):
+    """usage.iterations 를 종류(message · fallback_message · compaction …)별 횟수 · 토큰 합으로 묶는다.
+    달러가 아니라 토큰만이라 공개 로그에도 남긴다 — 맨 위 합계와 견주는 데 쓴다."""
+    by = {}
+    for x in its:
+        b = by.setdefault(str(x.get("type") or "unknown"), dict.fromkeys(("n",) + TOKEN_KEYS, 0))
+        b["n"] += 1
+        for k in TOKEN_KEYS:
+            b[k] += int(x.get(k) or 0)
+    return by
+
+
 def usage_of(msg):
     u = to_dict(getattr(msg, "usage", None)) or {}
     st = to_dict(u.get("server_tool_use")) or {}
-    rec = {k: int(u.get(k) or 0) for k in
-           ("input_tokens", "output_tokens", "cache_creation_input_tokens", "cache_read_input_tokens")}
+    rec = {k: int(u.get(k) or 0) for k in TOKEN_KEYS}
     rec["web_search_requests"] = int(st.get("web_search_requests") or 0)
     rec["web_fetch_requests"] = int(st.get("web_fetch_requests") or 0)
     its = [to_dict(x) or {} for x in (u.get("iterations") or [])]
     rec["iterations"] = len(its)
     rec["fallback_ran"] = any(x.get("type") == "fallback_message" for x in its)
-    rec["usd"] = round(usd_of(rec), 4)
-    if len(its) > 1:   # 대체 모델로 넘어간 요청: 시도별 합도 남겨 콘솔 청구와 견줌
-        alt = {k: sum(int(x.get(k) or 0) for x in its) for k in
-               ("input_tokens", "output_tokens", "cache_creation_input_tokens", "cache_read_input_tokens")}
+    by = iteration_tokens(its)
+    if by:
+        rec["iteration_tokens"] = by
+    # compaction 반복의 토큰은 맨 위 usage 에 안 들어가므로(SDK 설명) 어림에 따로 더한다
+    rec["usd"] = round(usd_of(rec) + usd_of(by.get("compaction", {})), 4)
+    if len(its) > 1:   # 반복이 여럿인 요청: 반복별 합으로도 셈해 맨 위 합계 · 콘솔 청구와 견줌
+        alt = {k: sum(b[k] for b in by.values()) for k in TOKEN_KEYS}
         rec["usd_iterations_sum"] = round(usd_of(dict(alt, web_search_requests=rec["web_search_requests"])), 4)
     return rec
 
@@ -555,11 +572,18 @@ class Run:
         return sum(r["web_search_requests"] for r in self.requests)
 
     def totals(self):
-        keys = ("input_tokens", "output_tokens", "cache_creation_input_tokens", "cache_read_input_tokens",
-                "web_search_requests", "web_fetch_requests")
+        keys = TOKEN_KEYS + ("web_search_requests", "web_fetch_requests")
         t = {k: sum(r[k] for r in self.requests) for k in keys}
         t["usd"] = round(self.usd(), 4)
         t["requests"] = len(self.requests)
+        it = {}
+        for r in self.requests:
+            for typ, b in (r.get("iteration_tokens") or {}).items():
+                acc = it.setdefault(typ, dict.fromkeys(b, 0))
+                for k, v in b.items():
+                    acc[k] += v
+        if it:
+            t["iteration_tokens"] = it
         return t
 
     def record(self, code):
@@ -820,7 +844,7 @@ def parse_args(argv=None):
     p.add_argument("--effort", default="high", choices=["low", "medium", "high", "xhigh", "max"])
     p.add_argument("--max-tokens", type=int, default=64000, help="요청 하나의 출력 한도(생각 포함)")
     p.add_argument("--max-searches", type=int, default=30, help="요청 하나에서 웹 검색 상한")
-    p.add_argument("--max-fetches", type=int, default=10, help="요청 하나에서 웹 가져오기 상한")
+    p.add_argument("--max-fetches", type=int, default=15, help="요청 하나에서 웹 가져오기 상한")
     p.add_argument("--max-requests", type=int, default=8, help="조사 요청 수 상한(pause_turn 이어 보내기 포함)")
     p.add_argument("--max-total-searches", type=int, default=70, help="조사 전체의 웹 검색 상한(넘으면 마무리)")
     p.add_argument("--max-usd", type=float, default=3.0, help="조사 전체의 어림 비용 상한(넘으면 마무리)")
