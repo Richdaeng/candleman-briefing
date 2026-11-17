@@ -1,0 +1,175 @@
+{
+  "date": "2026-11-17",
+  "started_utc": "2026-11-17T04:09:10+00:00",
+  "seconds": 136.5,
+  "code": 0,
+  "model": "claude-opus-5-5",
+  "served_by": [
+    "claude-opus-5-5"
+  ],
+  "effort": "high",
+  "caps": {
+    "max_searches_per_request": 30,
+    "max_fetches_per_request": 15,
+    "max_requests": 8,
+    "max_total_searches": 70,
+    "max_usd": 3.0
+  },
+  "totals": {
+    "input_tokens": 24,
+    "output_tokens": 12463,
+    "cache_creation_input_tokens": 64544,
+    "cache_read_input_tokens": 251102,
+    "web_search_requests": 21,
+    "web_fetch_requests": 4,
+    "requests": 1,
+    "iteration_tokens": {
+      "message": {
+        "n": 11,
+        "input_tokens": 24,
+        "output_tokens": 12463,
+        "cache_creation_input_tokens": 64544,
+        "cache_read_input_tokens": 251102
+      }
+    }
+  },
+  "requests": [
+    {
+      "input_tokens": 24,
+      "output_tokens": 12463,
+      "cache_creation_input_tokens": 64544,
+      "cache_read_input_tokens": 251102,
+      "web_search_requests": 21,
+      "web_fetch_requests": 4,
+      "iterations": 11,
+      "fallback_ran": false,
+      "iteration_tokens": {
+        "message": {
+          "n": 11,
+          "input_tokens": 24,
+          "output_tokens": 12463,
+          "cache_creation_input_tokens": 64544,
+          "cache_read_input_tokens": 251102
+        }
+      },
+      "step": "research",
+      "stop": "end_turn",
+      "model": "claude-opus-5-5",
+      "sec": 136.5
+    }
+  ],
+  "queries": [
+    "stock market close November 16 2026 S&P 500 Nasdaq Dow",
+    "뉴욕마감 11월 16일 2026",
+    "10-year Treasury yield November 16 2026 close",
+    "bitcoin price today November 17 2026",
+    "FOMC minutes October 2026 meeting release November 18",
+    "비트코인 가격 11월 17일",
+    "한국은행 금통위 11월 26일 2026 기준금리",
+    "원달러 환율 16일 주간거래 종가 마감",
+    "BLS employment situation CPI release schedule November December 2026",
+    "Nvidia third quarter fiscal 2027 financial results date conference call",
+    "Nvidia board Jensen Huang return stock November 16 2026",
+    "Walmart third quarter fiscal 2027 earnings release date November 2026",
+    "한국은행 2026년 통화정책방향 결정회의 개최 일정 11월 26일",
+    "advance retail sales October 2026 release date census",
+    "Anthropic IPO pricing date Nasdaq debut",
+    "미 국채 10년물 금리 16일 뉴욕채권 마감",
+    "Empire State manufacturing November 2026 7.8",
+    "BLS schedule of selected releases November 2026",
+    "이더리움 가격 17일 오전 코인마켓캡",
+    "ethereum price November 17 2026",
+    "비트코인 17일 오전 9시 24시간 전보다 이더리움"
+  ],
+  "fetched": [
+    "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
+    "https://www.bea.gov/news/schedule",
+    "https://coinmarketcap.com/",
+    "https://www.coingecko.com/"
+  ],
+  "tool_errors": [
+    "web_fetch_tool_result:url_not_in_prior_context",
+    "web_fetch_tool_result:url_not_in_prior_context"
+  ],
+  "repaired_because": [],
+  "warnings": [
+    "일정 2: when 을 src 로 다시 셈 — '11/18 (수) 06:00쯤' → '11/18 (수) 06시쯤'"
+  ],
+  "errors": [],
+  "dropped": [
+    "미 10년물 금리: 출처별 5.115% · 5.121% · 5.133% · 5.14%로 달라 뺌",
+    "이더리움 가격 · 24시간 등락률: $1,814~$1,829, +0.10%~−0.89%로 출처별로 달라 뺌",
+    "뉴욕 연은 제조업지수 시장 예상치: 17.0 · 18.0으로 달라 뺌",
+    "WTI 가격 $85.72: 한 곳에만 나와 뺌"
+  ],
+  "numbers": {
+    "checked": 10,
+    "not_found": [
+      "64,800",
+      "0.7",
+      "1,800"
+    ],
+    "evidence_chars": 172332
+  },
+  "brief": {
+    "date": "2026-11-17",
+    "overnight": [
+      "미국 증시: 나스닥 −2.5% · S&P500 −1.9% · 다우 −1.4%",
+      "반도체지수 −5.3%, 엔비디아 이사회 젠슨 황 복귀 검토 안 함 보도 여파",
+      "비트코인 $64,800 (−0.7%, 11/17 09시) · 이더리움 $1,800선",
+      "달러/원 1,335.7원 (11/16 종가) · 미 10년물 금리 소폭 하락",
+      "11월 뉴욕 연은 제조업지수 7.8, 전월 25.5에서 급락함",
+      "국제유가 3%대 하락 · 비트코인 현물 ETF 자금 유출 지속"
+    ],
+    "schedule": [
+      {
+        "when": "11/17 (화) 22:30",
+        "what": "미국 10월 소매판매 발표",
+        "impact": 2,
+        "why": "PCE급 소비지표, 평소 수준 변동"
+      },
+      {
+        "when": "11/18 (수) 06시쯤",
+        "what": "엔비디아 3분기 실적 발표",
+        "impact": 3,
+        "why": "발표 다음 날 SK하이닉스 1.41배"
+      },
+      {
+        "when": "11/19 (목) 04:00",
+        "what": "미국 FOMC 의사록 공개 (10월 회의)",
+        "impact": 2,
+        "why": "금리 결정 아닌 기록 공개, 재지 않음"
+      },
+      {
+        "when": "11/19 (목) 21:00",
+        "what": "월마트 3분기 실적 발표",
+        "impact": 2,
+        "why": "그 밖의 큰 기업 실적, 재지 않음"
+      },
+      {
+        "when": "11/25 (수) 22:30",
+        "what": "미국 10월 PCE · 3분기 GDP 잠정치 발표",
+        "impact": 2,
+        "why": "과거 발표 날 평소와 차이 뚜렷하지 않음"
+      },
+      {
+        "when": "11/26 (목)",
+        "what": "한국은행 금통위 기준금리 결정",
+        "impact": 2,
+        "why": "과거 결정 날 평소와 차이 뚜렷하지 않음"
+      }
+    ],
+    "sources": [
+      "https://www.cnbc.com/2026/11/15/stock-market-today-live-updates.html",
+      "https://www.etoday.co.kr/news/view/2648933",
+      "https://view.asiae.co.kr/article/2026111615425409601",
+      "https://www.seoulfn.com/news/articleView.html?idxno=642967",
+      "https://www.ittimes.com/news/articleView.html?idxno=88034",
+      "https://www.dailian.co.kr/news/view/1715896/%EC%BD%94%EC%9D%B8%EB%89%B4%EC%8A%A4-%EB%A7%A4%EC%88%98%EC%84%B8-%EB%81%8A%EA%B8%B4-%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B86-%EB%8B%AC%EB%9F%AC-2026",
+      "https://www.marketscreener.com/news/november-empire-state-manufacturing-index-declines-more-than-expected-ce785edfd880f323",
+      "https://www.bea.gov/news/schedule",
+      "https://www.census.gov/retail/release_schedule.html",
+      "https://www.federalreserve.gov/monetarypolicy.htm"
+    ]
+  }
+}
