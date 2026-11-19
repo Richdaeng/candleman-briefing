@@ -1,32 +1,31 @@
 {
-  "date": "2026-11-19",
+  "date": "2026-11-20",
   "overnight": [
-    "미국 증시: 나스닥 +0.4% · S&P500 −0.2% · 다우 −1.1%",
-    "엔비디아 실적 상회에도 약 3% 하락 · 유나이티드헬스 급락 (메디케어 감사 확대안)",
-    "연준 의사록: 거의 모두 추가 인상 적절 · 월러 12월 50bp 인상 거론",
-    "비트코인 약 $62,500 (약 −2.4%) · 이더리움 약 $1,750 (약 −2%) · 19일 새벽",
-    "달러/원 1,333.0원 (11/18 종가) · 미 10년물 5.07% (미 11/18 마감)",
-    "앤트로픽(ANT) 공모가 $83 보도 (희망가 $70~78 상회 · 소식통 인용)"
+    "미국 증시: 나스닥 −2.25% · S&P500 −2.02% · 다우 −2.19%",
+    "엔비디아 등 반도체주 하락: 앤트로픽 상장에도 AI 낙관론 못 살림",
+    "앤트로픽(ANT) 상장 첫날 $97.17 마감 (공모가 $83 대비 +17.07%)",
+    "연준 12월 금리 인상 확률 약 95% (CME FedWatch)",
+    "비트코인 약 $62,000 (약 −1%) · 이더리움 약 $1,770 (소폭 상승) · 20일 새벽",
+    "달러/원 1,330.0원 (11/19 종가) · 미 10년물 5.05% (미 11/19 마감)"
   ],
   "schedule": [
-    {"when": "11/19 (목) 10:00", "what": "수능일: 한국 증시 1시간 늦게 개장 (정규장 10:00~16:30)", "impact": 1, "why": "재지 않음 · 개장 시각만 바뀜"},
-    {"when": "11/19 (목)", "what": "미 · 중 · 러 정상 3자 회동: 트럼프 · 시진핑 · 푸틴 (APEC 선전)", "impact": 2, "why": "재지 않음 · 지정학 일정이라 낮게"},
-    {"when": "11/19 (목) 21:00", "what": "월마트 3분기 실적 발표 (컨퍼런스콜 22:00)", "impact": 2, "why": "재지 않음 · 큰 기업 실적이라 낮게"},
-    {"when": "11/20 (금) 새벽", "what": "앤트로픽(ANT) 나스닥 상장 첫 거래 예정 (미 현지 11/19 · 시작 시각 미정)", "impact": 2, "why": "재지 않음 · 큰 기업 이벤트라 낮게"},
     {"when": "11/25 (수) 22:30", "what": "미국 10월 PCE 물가 · 3분기 GDP 2차 추정치 발표", "impact": 2, "why": "주요 일정이나 그날 움직임 평소와 큰 차이 없음"},
     {"when": "11/26 (목)", "what": "한국은행 금통위 기준금리 결정", "impact": 2, "why": "주요 일정이나 그날 움직임 평소와 큰 차이 없음"},
-    {"when": "12/01 (화) 06시쯤", "what": "MSCI 지수 개편 반영: 스트래티지(MSTR) 편출 (미 현지 11/30 장 마감)", "impact": 2, "why": "재지 않음 · 지수 개편 이벤트라 낮게"}
+    {"when": "11/26 (목) 23:30", "what": "미국 증시 추수감사절 휴장 · 다음 날 조기 마감 (한국 11/28 (토) 03:00)", "impact": 1, "why": "재지 않음 · 거래 시간만 바뀜"},
+    {"when": "12/01 (화) 06시쯤", "what": "MSCI 지수 개편 반영: 스트래티지(MSTR) 편출 (미 현지 11/30 장 마감)", "impact": 2, "why": "재지 않음 · 지수 개편 이벤트라 낮게"},
+    {"when": "12/03 (목) 06시쯤", "what": "세일즈포스 3분기 실적 발표 (미 현지 12/02 장 마감 뒤)", "impact": 2, "why": "재지 않음 · 큰 기업 실적이라 낮게"},
+    {"when": "12/04 (금) 22:30", "what": "미국 11월 고용보고서 (비농업 고용)", "impact": 4, "why": "과거 발표 날 미 국채금리 변동 평소의 1.45배"}
   ],
   "sources": [
-    "https://www.newspim.com/news/view/20261119000027",
-    "https://tvnewscheck.com/business/article/dow-drops-561-nasdaq-rises-102-sp-500-loses-17/",
-    "https://www.newsis.com/view/NISX20261118_0003873523",
-    "https://www.coindesk.com/business/2026/11/18/live-updates-bitcoin-stuck-near-usd65-000-as-popular-basis-trade-returns-dry-up",
-    "https://www.tokenpost.com/news/investing/60637",
-    "https://www.cnbc.com/2026/11/18/fed-minutes-october-2026.html",
-    "https://www.cnbc.com/2026/11/18/anthropic-ipo-ai-offering-price.html",
-    "https://www.news1.kr/world/international-economy/6358802",
-    "https://www.bea.gov/news/2026/gdp-advance-estimate-3rd-quarter-2026",
-    "https://corporate.walmart.com/news/2026/11/Walmart-To-Host-Q3-Earnings-Call-Nov-19-2026"
+    "https://finance.yahoo.com/markets/live/stock-market-today-thursday-november-19-dow-sp-500-nasdaq-anthropic-ipo-live-141306032.html",
+    "https://biz.heraldcorp.com/article/10943334",
+    "https://www.cnn.com/2026/11/19/business/live-news/anthropic-ipo",
+    "https://www.cnbc.com/2026/11/19/us-treasury-yields-investors-us-economy.html",
+    "https://www.tokenpost.kr/news/briefing/441069",
+    "https://en.bloomingbit.io/feed/news/124825",
+    "https://en.sedaily.com/economy/2026/11/19/won-rises-for-fourth-day-as-exporter-dollar-sales-offset",
+    "https://www.bls.gov/schedule/news_release/empsit.htm",
+    "https://www.bea.gov/index.php/news/schedule/full",
+    "https://investor.salesforce.com/news/news-details/2026/Salesforce-Announces-Date-of-Third-Quarter-Fiscal-2027-Earnings-Release-and-Webcast/default.aspx"
   ]
 }
