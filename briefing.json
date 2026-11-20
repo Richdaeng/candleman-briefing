@@ -1,12 +1,12 @@
 {
-  "date": "2026-11-20",
+  "date": "2026-11-21",
   "overnight": [
-    "미국 증시: 나스닥 −2.25% · S&P500 −2.02% · 다우 −2.19%",
-    "엔비디아 등 반도체주 하락: 앤트로픽 상장에도 AI 낙관론 못 살림",
-    "앤트로픽(ANT) 상장 첫날 $97.17 마감 (공모가 $83 대비 +17.07%)",
-    "연준 12월 금리 인상 확률 약 95% (CME FedWatch)",
-    "비트코인 약 $62,000 (약 −1%) · 이더리움 약 $1,770 (소폭 상승) · 20일 새벽",
-    "달러/원 1,330.0원 (11/19 종가) · 미 10년물 5.05% (미 11/19 마감)"
+    "미국 증시 (11/20 마감): 나스닥 −5.28% · S&P500 −3.70% · 다우 −1.93%",
+    "S&P500 · 다우 조정장 진입 · 나스닥 올해 상승분 반납 (주간 약 −10%)",
+    "엔비디아, SEC 회계 조사 보도까지 겹쳐 급락 · 앤트로픽 상장 이튿날 약 9% 하락",
+    "비트코인 $58,000대 (약 −6%) · 이더리움 $1,600대 (약 −8%) · 21일 새벽",
+    "코스피 −5.2% (4,869.96) · 코스닥도 5%대 급락 (11/20 마감)",
+    "달러/원 1,336.2원 (11/20 종가) · 미 10년물 약 4.9% (5% 아래로)"
   ],
   "schedule": [
     {"when": "11/25 (수) 22:30", "what": "미국 10월 PCE 물가 · 3분기 GDP 2차 추정치 발표", "impact": 2, "why": "주요 일정이나 그날 움직임 평소와 큰 차이 없음"},
@@ -17,15 +17,15 @@
     {"when": "12/04 (금) 22:30", "what": "미국 11월 고용보고서 (비농업 고용)", "impact": 4, "why": "과거 발표 날 미 국채금리 변동 평소의 1.45배"}
   ],
   "sources": [
-    "https://finance.yahoo.com/markets/live/stock-market-today-thursday-november-19-dow-sp-500-nasdaq-anthropic-ipo-live-141306032.html",
-    "https://biz.heraldcorp.com/article/10943334",
-    "https://www.cnn.com/2026/11/19/business/live-news/anthropic-ipo",
-    "https://www.cnbc.com/2026/11/19/us-treasury-yields-investors-us-economy.html",
-    "https://www.tokenpost.kr/news/briefing/441069",
-    "https://en.bloomingbit.io/feed/news/124825",
-    "https://en.sedaily.com/economy/2026/11/19/won-rises-for-fourth-day-as-exporter-dollar-sales-offset",
-    "https://www.bls.gov/schedule/news_release/empsit.htm",
-    "https://www.bea.gov/index.php/news/schedule/full",
+    "https://news.mtn.co.kr/article/2026112106190556967",
+    "https://www.newspim.com/news/view/20261121000021",
+    "https://www.investing.com/news/stock-market-news/nvidia-shares-fall-10-as-report-of-sec-accounting-probe-adds-to-pressure-5042464",
+    "https://www.coindesk.com/markets/2026/11/20/bitcoin-plunges-below-usd59-000-as-rush-to-cash-puts-new-bear-market-lows-back-in-play",
+    "https://www.blockmedia.co.kr/archives/1168815",
+    "https://news.sbs.co.kr/english/article.do?news_id=N1008856136",
+    "https://www.koreareport.co.kr/news/articleView.html?idxno=54979",
+    "https://www.bls.gov/schedule/news_release/empSit.htm",
+    "https://www.bea.gov/news/schedule",
     "https://investor.salesforce.com/news/news-details/2026/Salesforce-Announces-Date-of-Third-Quarter-Fiscal-2027-Earnings-Release-and-Webcast/default.aspx"
   ]
 }
