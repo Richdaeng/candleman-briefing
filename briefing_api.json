@@ -1,55 +1,55 @@
 {
-  "date": "2026-11-19",
+  "date": "2026-11-20",
   "overnight": [
-    "미국 증시: 나스닥 +0.42% · S&P500 −0.23% · 다우 −1.11%",
-    "유나이티드헬스 급락, 메디케어 감사 강화안 여파로 다우 하락 주도",
-    "엔비디아 호실적에도 −2.9%, 5거래일 연속 하락",
-    "비트코인 $62,000대 · 이더리움 $1,700대, 24시간 하락",
-    "달러/원 1,333.0원 (11/18 종가) · 미 10년물 5.07%",
-    "FOMC 의사록 추가 인상 무게 · 월러 이사 12월 0.5%p 인상 거론"
+    "미국 증시: 나스닥 −2.25% · S&P500 −2.02% · 다우 −2.19%",
+    "앤트로픽 상장 첫날 공모가 대비 +17% 마감에도 AI · 반도체주 투매",
+    "S&P500 6거래일 연속 하락 · 다우 5만선 아래로 마감",
+    "비트코인 약 $62,000 · 이더리움 약 $1,760 (오전 기준)",
+    "달러/원 1,330.0원 (11/19 종가) · 미 10년물 5.05%",
+    "미 주간 신규 실업수당 청구 20.3만 건, 예상 웃돎"
   ],
   "schedule": [
     {
-      "when": "11/19 (목) 21:00",
-      "what": "월마트 3분기 실적 발표",
+      "when": "11/25 (수) 06시쯤",
+      "what": "델 테크놀로지스 3분기 실적",
       "impact": 2,
       "why": "그 밖의 큰 기업 실적(재지 않음)"
     },
     {
-      "when": "11/19 (목) 밤",
-      "what": "앤트로픽 나스닥 상장 (공모가 $83)",
-      "impact": 2,
-      "why": "큰 기업 일정 기준(재지 않음)"
-    },
-    {
       "when": "11/25 (수) 22:30",
-      "what": "미국 10월 PCE (개인소득·지출)",
+      "what": "미국 10월 PCE · 3분기 GDP 잠정치",
       "impact": 2,
       "why": "발표 날 변동 평소와 뚜렷한 차이 없음"
-    },
-    {
-      "when": "11/25 (수) 22:30",
-      "what": "미국 3분기 GDP 잠정치",
-      "impact": 1,
-      "why": "속보치 아닌 2차 발표라 낮게 봄"
     },
     {
       "when": "11/26 (목)",
       "what": "한국은행 금통위 기준금리 결정",
       "impact": 2,
       "why": "결정 날 변동 평소와 뚜렷한 차이 없음"
+    },
+    {
+      "when": "12/03 (목) 06시쯤",
+      "what": "세일즈포스 3분기 실적",
+      "impact": 2,
+      "why": "그 밖의 큰 기업 실적(재지 않음)"
+    },
+    {
+      "when": "12/04 (금) 22:30",
+      "what": "미국 11월 고용보고서 (비농업)",
+      "impact": 4,
+      "why": "과거 발표 날 미 국채금리 변동 1.45배"
     }
   ],
   "sources": [
-    "https://www.mt.co.kr/world/2026/11/19/2026111906582147139",
-    "https://cappnotes.substack.com/p/closing-look-wednesday-november-18",
-    "https://www.junggi.co.kr/news/articleView.html?idxno=38553",
-    "https://www.fnnews.com/news/202611181530444651",
-    "https://biz.sbs.co.kr/article/20000347336",
-    "https://kr.investing.com/news/stock-market-news/article-2182722",
-    "https://www.blockmedia.co.kr/archives/1167826",
-    "https://coinmarketcap.com/",
-    "https://www.ittimes.com/news/articleView.html?idxno=88065",
-    "https://www.bea.gov/news/schedule"
+    "https://www.cnbc.com/2026/11/18/stock-market-today-live-updates.html",
+    "https://www.senmoney.co.kr/news/articleView.html?idxno=38745",
+    "https://view.asiae.co.kr/article/2026111915444288274",
+    "https://www.tokenpost.kr/news/insights/441201",
+    "https://sg.finance.yahoo.com/news/u-treasury-yields-slip-safe-225927497.html",
+    "https://theweekendspread.substack.com/p/the-close-thursday-november-19-2026",
+    "https://www.etoday.co.kr/news/view/2650754",
+    "https://www.thekorean.today/61952",
+    "https://www.investing.com/news/economy-news/us-weekly-jobless-claims-increase-slightly-5039110",
+    "https://www.cbsnews.com/news/anthropic-ipo-nasdaq-debut-claude-ai/"
   ]
 }
