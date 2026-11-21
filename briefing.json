@@ -1,31 +1,32 @@
 {
-  "date": "2026-11-21",
+  "date": "2026-11-22",
   "overnight": [
-    "미국 증시 (11/20 마감): 나스닥 −5.28% · S&P500 −3.70% · 다우 −1.93%",
-    "S&P500 · 다우 조정장 진입 · 나스닥 올해 상승분 반납 (주간 약 −10%)",
-    "엔비디아, SEC 회계 조사 보도까지 겹쳐 급락 · 앤트로픽 상장 이튿날 약 9% 하락",
-    "비트코인 $58,000대 (약 −6%) · 이더리움 $1,600대 (약 −8%) · 21일 새벽",
-    "코스피 −5.2% (4,869.96) · 코스닥도 5%대 급락 (11/20 마감)",
-    "달러/원 1,336.2원 (11/20 종가) · 미 10년물 약 4.9% (5% 아래로)"
+    "미국 증시 휴장 (주말) · 11/20 마감 나스닥 −5.3% · S&P500 −3.7% · 다우 −1.9%",
+    "비트코인 약 $60,300 · 이더리움 약 $1,690 (22일 새벽 기준)",
+    "비트코인 21일 $55,000대까지 급락 (2024년 9월 이후 최저) 뒤 약 9% 반등",
+    "미 현물 비트코인 ETF 11/16~20 주간 순유출 약 12.5억 달러",
+    "엔비디아 −14.0% · SEC 회계 조사 보도(로이터) 겹쳐 급락 (11/20)",
+    "달러/원 1,336.2원 (11/20 종가) · 미 10년물 약 4.9%"
   ],
   "schedule": [
+    {"when": "11/23 (월) 23:45", "what": "미국 11월 S&P글로벌 PMI 속보치 (제조업 · 서비스업)", "impact": 1, "why": "재지 않음 · 작은 지표라 낮게"},
+    {"when": "11/25 (수) 06시쯤", "what": "델 테크놀로지스 3분기 실적 발표 (미 현지 11/24 장 마감 뒤)", "impact": 2, "why": "재지 않음 · 큰 기업 실적이라 낮게"},
     {"when": "11/25 (수) 22:30", "what": "미국 10월 PCE 물가 · 3분기 GDP 2차 추정치 발표", "impact": 2, "why": "주요 일정이나 그날 움직임 평소와 큰 차이 없음"},
     {"when": "11/26 (목)", "what": "한국은행 금통위 기준금리 결정", "impact": 2, "why": "주요 일정이나 그날 움직임 평소와 큰 차이 없음"},
-    {"when": "11/26 (목) 23:30", "what": "미국 증시 추수감사절 휴장 · 다음 날 조기 마감 (한국 11/28 (토) 03:00)", "impact": 1, "why": "재지 않음 · 거래 시간만 바뀜"},
     {"when": "12/01 (화) 06시쯤", "what": "MSCI 지수 개편 반영: 스트래티지(MSTR) 편출 (미 현지 11/30 장 마감)", "impact": 2, "why": "재지 않음 · 지수 개편 이벤트라 낮게"},
     {"when": "12/03 (목) 06시쯤", "what": "세일즈포스 3분기 실적 발표 (미 현지 12/02 장 마감 뒤)", "impact": 2, "why": "재지 않음 · 큰 기업 실적이라 낮게"},
     {"when": "12/04 (금) 22:30", "what": "미국 11월 고용보고서 (비농업 고용)", "impact": 4, "why": "과거 발표 날 미 국채금리 변동 평소의 1.45배"}
   ],
   "sources": [
-    "https://news.mtn.co.kr/article/2026112106190556967",
-    "https://www.newspim.com/news/view/20261121000021",
-    "https://www.investing.com/news/stock-market-news/nvidia-shares-fall-10-as-report-of-sec-accounting-probe-adds-to-pressure-5042464",
-    "https://www.coindesk.com/markets/2026/11/20/bitcoin-plunges-below-usd59-000-as-rush-to-cash-puts-new-bear-market-lows-back-in-play",
-    "https://www.blockmedia.co.kr/archives/1168815",
-    "https://news.sbs.co.kr/english/article.do?news_id=N1008856136",
-    "https://www.koreareport.co.kr/news/articleView.html?idxno=54979",
-    "https://www.bls.gov/schedule/news_release/empSit.htm",
+    "https://www.coindesk.com/markets/2026/11/21/bitcoin-bounces-9-from-two-year-low-to-retake-usd60-000-as-traders-eye-monday-s-stock-open",
+    "https://www.blockmedia.co.kr/archives/1169056",
+    "https://eurasiabusinessnews.com/2026/11/21/bitcoin-price-today-november-21-2026-btc-rebounds-above-60000-as-solana-leads-crypto-gains/",
+    "https://crypto.news/bitcoin-ether-etf-outflows-nov-16-20-2026/",
+    "https://www.fool.com/coverage/stock-market-today/2026/11/20/stock-market-today-nov-20-stocks-plunge-as-ai-trade-unwinds/",
+    "https://www.famtimes.co.kr/news/articleView.html?idxno=705303",
+    "https://www.etftrends.com/fixed-income-content-hub/treasury-yields-snapshot-november-20-2026/",
+    "http://www.dailypop.kr/news/articleView.html?idxno=104854",
     "https://www.bea.gov/news/schedule",
-    "https://investor.salesforce.com/news/news-details/2026/Salesforce-Announces-Date-of-Third-Quarter-Fiscal-2027-Earnings-Release-and-Webcast/default.aspx"
+    "https://www.bls.gov/schedule/news_release/empsit.htm"
   ]
 }
