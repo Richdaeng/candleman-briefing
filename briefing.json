@@ -1,32 +1,32 @@
 {
-  "date": "2026-11-26",
+  "date": "2026-11-27",
   "overnight": [
-    "미국 증시(11/25 마감): 나스닥 −0.62% · S&P500 −0.25% · 다우 +0.33%",
-    "USTR, 한국 포함 14개 경제권 과잉생산 관세안 공개 (확정 전, 한국 15% 상한 유지)",
-    "장중 나스닥 4%대 급락 뒤 만회: 반도체 · AI주 매도, 관세안 부담",
-    "10월 PCE 3.8% · 근원 3.3%(예상 3.2%) · 3분기 GDP 4.3%(속보치 3.4%)",
-    "비트코인 약 $59,900 · 이더리움 약 $1,680 (26일 새벽, 24시간 소폭 상승)",
-    "달러/원 1,343.2원 (11/25 종가) · 미 10년물 금리 하락"
+    "미국 증시 휴장 (추수감사절) · 11/27 장은 한국 11/28 03:00 조기 마감",
+    "비트코인 약 $60,600 · 이더리움 약 $1,700 (27일 새벽, 24시간 상승)",
+    "달러/원 1,342.7원 (11/26 종가) · 미 10년물 4.85% (11/25 마감)",
+    "한국은행 기준금리 3.25%로 0.25%p 인상 (11/26 금통위)",
+    "미국 현물 비트코인 ETF 11월 순유출 $5B 넘어 월간 최대 (11/25까지)",
+    "유가 상승: 후티, 사우디 정유시설 공격 주장 · 호르무즈 선박 기뢰 피격 보도"
   ],
   "schedule": [
-    {"when": "11/26 (목) 오전", "what": "한국은행 금통위 기준금리 결정", "impact": 2, "why": "주요 일정이나 그날 움직임 평소와 큰 차이 없음"},
-    {"when": "11/26 (목) 밤", "what": "미국 증시 추수감사절 휴장 (금요일 장은 한국 시각 11/28 03:00 조기 마감)", "impact": 1, "why": "재지 않음 · 휴장 안내라 낮게"},
-    {"when": "12/01 (화) 06시쯤", "what": "MSCI 지수 개편 반영: 스트래티지(MSTR) · 메타플래닛 편출 (미 현지 11/30 장 마감)", "impact": 2, "why": "재지 않음 · 지수 개편이라 낮게"},
-    {"when": "12/03 (목) 06시쯤", "what": "세일즈포스 3분기 실적 발표 (미 현지 12/02 장 마감 뒤)", "impact": 2, "why": "재지 않음 · 큰 기업 실적이라 낮게"},
+    {"when": "11/29 (일)", "what": "OPEC+ 장관급 회의 (2027년 산유량 할당 논의)", "impact": 2, "why": "재지 않음 · 유가 관련 일정이라 낮게"},
+    {"when": "12/01 (화) 06시쯤", "what": "MSCI 지수 개편 반영: 스트래티지(MSTR) 편출 (미 현지 11/30 장 마감)", "impact": 2, "why": "재지 않음 · 지수 개편이라 낮게"},
+    {"when": "12/02 (수) 06시쯤", "what": "마벨 테크놀로지(MRVL) 회계 3분기 실적 발표 (미 현지 12/01 장 마감 뒤)", "impact": 2, "why": "재지 않음 · 큰 기업 실적이라 낮게"},
     {"when": "12/04 (금) 22:30", "what": "미국 11월 고용보고서 (비농업 고용)", "impact": 4, "why": "과거 발표 날 미 국채금리 변동 평소의 1.45배"},
     {"when": "12/10 (목) 04:00", "what": "미국 FOMC 기준금리 결정 (미 현지 12/09)", "impact": 4, "why": "과거 발표 날 미국 주식 변동 평소의 1.4배"},
-    {"when": "12/10 (목) 06시쯤", "what": "브로드컴 회계 4분기 실적 발표 (미 현지 12/09 장 마감 뒤)", "impact": 3, "why": "재지 않음 · 반도체 대형주 실적"}
+    {"when": "12/10 (목) 06시쯤", "what": "브로드컴 회계 4분기 실적 발표 (미 현지 12/09 장 마감 뒤)", "impact": 3, "why": "재지 않음 · 반도체 대형주 실적"},
+    {"when": "12/10 (목) 22:30", "what": "미국 11월 소비자물가지수(CPI) 발표", "impact": 4, "why": "과거 발표 날 미국 주식 변동 평소의 1.4배"}
   ],
   "sources": [
-    "https://www.etoday.co.kr/news/view/2653045",
-    "https://www.advisorperspectives.com/dshort/updates/2026/11/25/inflation-pce-price-index-october-2026",
-    "https://www.bea.gov/news/2026/gdp-second-estimate-and-corporate-profits-3rd-quarter-2026",
-    "https://www.newsis.com/view/NISX20261125_0003883035",
-    "https://biz.heraldcorp.com/article/10949544",
-    "https://www.blockmedia.co.kr/archives/1170749",
+    "https://view.asiae.co.kr/article/2026112615391282826",
+    "https://www.etoday.co.kr/news/view/2652786",
+    "https://longbridge.com/en/news/306824440",
+    "https://www.tokenpost.kr/news/briefing/445121",
+    "https://www.theblock.co/news/markets/2026-11-26-spot-bitcoin-etfs-worst-month-november-446814",
     "https://www.bls.gov/schedule/2026/12_sched_list.htm",
     "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
-    "https://finviz.com/news/418980/broadcom-inc-to-announce-fourth-quarter-and-fiscal-year-2026-financial-results-on-wednesday-december-9-2026",
-    "https://theblock.co/news/markets/2026-11-11-strategy-metaplanet-lose-msci-index-membership-november-reshuffle-438437"
+    "https://investors.broadcom.com/news-releases/news-release-details/broadcom-inc-announce-fourth-quarter-and-fiscal-year-2026",
+    "https://investor.marvell.com/news-events/press-releases/detail/1041/marvell-technology-inc-announces-conference-call-to-review-third-quarter-of-fiscal-year-2027-financial-results",
+    "https://www.theblock.co/news/markets/2026-11-11-strategy-metaplanet-lose-msci-index-membership-november-reshuffle-438437"
   ]
 }
