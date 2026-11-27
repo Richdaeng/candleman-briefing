@@ -1,0 +1,174 @@
+{
+  "date": "2026-11-27",
+  "started_utc": "2026-11-27T03:45:16+00:00",
+  "seconds": 143.8,
+  "code": 0,
+  "model": "claude-opus-5-5",
+  "served_by": [
+    "claude-opus-5-5"
+  ],
+  "effort": "high",
+  "caps": {
+    "max_searches_per_request": 30,
+    "max_fetches_per_request": 15,
+    "max_requests": 8,
+    "max_total_searches": 70,
+    "max_usd": 3.0
+  },
+  "totals": {
+    "input_tokens": 40,
+    "output_tokens": 12866,
+    "cache_creation_input_tokens": 56455,
+    "cache_read_input_tokens": 522123,
+    "web_search_requests": 22,
+    "web_fetch_requests": 4,
+    "requests": 1,
+    "iteration_tokens": {
+      "message": {
+        "n": 19,
+        "input_tokens": 40,
+        "output_tokens": 12866,
+        "cache_creation_input_tokens": 56455,
+        "cache_read_input_tokens": 522123
+      }
+    }
+  },
+  "requests": [
+    {
+      "input_tokens": 40,
+      "output_tokens": 12866,
+      "cache_creation_input_tokens": 56455,
+      "cache_read_input_tokens": 522123,
+      "web_search_requests": 22,
+      "web_fetch_requests": 4,
+      "iterations": 19,
+      "fallback_ran": false,
+      "iteration_tokens": {
+        "message": {
+          "n": 19,
+          "input_tokens": 40,
+          "output_tokens": 12866,
+          "cache_creation_input_tokens": 56455,
+          "cache_read_input_tokens": 522123
+        }
+      },
+      "step": "research",
+      "stop": "end_turn",
+      "model": "claude-opus-5-5",
+      "sec": 143.8
+    }
+  ],
+  "queries": [
+    "달러/원 환율 11월 26일 종가 마감",
+    "미국 10년물 국채금리 11월 25일 뉴욕마감",
+    "비트코인 이더리움 시세 11월 27일",
+    "bitcoin price today November 27 2026",
+    "CPI November 2026 release date December",
+    "FOMC December 8-9 2026 meeting",
+    "November 2026 jobs report release date BLS December 4",
+    "뉴욕증시 추수감사절 휴장 2026",
+    "미국 국채금리 25일 뉴욕채권 마감 10년물",
+    "뉴욕증시 휴장 비트코인 밤사이 뉴스 27일",
+    "coingecko bitcoin ethereum price",
+    "원·달러 환율 26일 1342.7원 마감",
+    "coinmarketcap cryptocurrency prices today",
+    "비트코인 6만1천달러 27일 오후",
+    "CME FedWatch December rate hike probability",
+    "Broadcom fourth quarter fiscal 2026 earnings date",
+    "한국은행 기준금리 인상 11월 26일 금통위",
+    "비트코인 옵션 만기 27일 데리비트",
+    "비트코인 이더리움 27일 정오 시세",
+    "Oracle second quarter fiscal 2027 results date",
+    "비트코인 61,000달러 이더리움 1,720달러",
+    "27일 오후 비트코인 코인마켓캡 이더리움 거래"
+  ],
+  "fetched": [
+    "https://www.bea.gov/news/schedule",
+    "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
+    "https://coinmarketcap.com/",
+    "https://www.coingecko.com/"
+  ],
+  "tool_errors": [
+    "web_fetch_tool_result:url_not_in_prior_context",
+    "web_fetch_tool_result:url_not_in_prior_context"
+  ],
+  "repaired_because": [],
+  "warnings": [
+    "검색 · 가져오기 결과에 없던 출처 1개를 뺌: https://kr.benzinga.com/news/usa/trading/%EB%AF%B8%EA%B5%AD-%EC%A6%9D%EC%8B%9C-2026%EB%85%84-%EC%B6%94%EC%88%98%EA%B0%90%EC%82%AC%EC%A0%88-%ED%9C%B4%EC%9E%A5"
+  ],
+  "errors": [],
+  "dropped": [
+    "비트코인 가격 · 24시간 등락률: Benzinga $60,712 (+0.40%, 10:23 KST) · 토큰포스트 $61,286 (+1.04%, 11:59 KST) · CoinGecko $60,640 (−0.10%)로 서로 다름",
+    "이더리움 가격 · 24시간 등락률: Benzinga $1,699.63 (+0.50%) · 토큰포스트 $1,721.86 (+1.51%)로 서로 다름",
+    "미 10년물 금리 (11/25 마감): 블록미디어 4.868% · 글로벌이코노믹(로이터 인용) 4.84%로 서로 다름, 11/26은 채권시장 휴장",
+    "비트코인 옵션 만기 규모: 블록미디어 약 70억달러 · 토큰포스트 68.88억달러 · 디지털투데이 76억달러로 서로 다름",
+    "12월 FOMC 인상 확률: KuCoin 97.8% · TradingView '거의 100%'로 숫자가 다름"
+  ],
+  "numbers": {
+    "checked": 4,
+    "not_found": [
+      "53.9"
+    ],
+    "evidence_chars": 119621
+  },
+  "brief": {
+    "date": "2026-11-27",
+    "overnight": [
+      "미국 증시 휴장 (추수감사절) · 오늘 밤 단축장, 28일 03:00 마감",
+      "비트코인 6만달러선 회복 · 이더리움 소폭 상승 (휴장 속 강보합)",
+      "달러/원 1,342.7원 (11/26 종가)",
+      "한은 기준금리 3.25%로 0.25%p 인상 (26일) · 위원 2명은 동결 의견",
+      "미 비트코인 현물 ETF 11월 순유출 53.9억달러, 월간 최대 기록",
+      "12월 FOMC 금리 인상 예상 우세 (CME FedWatch)"
+    ],
+    "schedule": [
+      {
+        "when": "11/27 (금) 17:00",
+        "what": "비트코인 11월물 옵션 만기 (데리비트)",
+        "impact": 1,
+        "why": "표에 없는 코인 일정, 낮게 매김"
+      },
+      {
+        "when": "12/04 (금) 22:30",
+        "what": "미국 11월 고용보고서 (비농업)",
+        "impact": 4,
+        "why": "과거 발표 날 미 국채금리 변동 1.45배"
+      },
+      {
+        "when": "12/08 (화) 22:30",
+        "what": "미국 10월 무역수지",
+        "impact": 1,
+        "why": "작은 지표"
+      },
+      {
+        "when": "12/10 (목) 04:00",
+        "what": "미국 FOMC 금리 결정 (경제전망 포함)",
+        "impact": 4,
+        "why": "과거 발표 날 미국 주식 변동 1.38배"
+      },
+      {
+        "when": "12/10 (목) 06시쯤",
+        "what": "브로드컴 4분기 실적 (장 마감 뒤)",
+        "impact": 3,
+        "why": "반도체 대형주 실적, 재지 않음"
+      },
+      {
+        "when": "12/10 (목) 22:30",
+        "what": "미국 11월 CPI",
+        "impact": 4,
+        "why": "과거 발표 날 미국 주식 변동 1.39배"
+      }
+    ],
+    "sources": [
+      "https://www.asiatoday.co.kr/kn/view.php?key=20261127010010661",
+      "https://view.asiae.co.kr/article/2026112615391282826",
+      "https://www.seoulfn.com/news/articleView.html?idxno=644050",
+      "https://www.huffingtonpost.kr/article/262437",
+      "https://www.e-focus.co.kr/news/articleView.html?idxno=3003398",
+      "https://www.gukjenews.com/news/articleView.html?idxno=3764917",
+      "https://financefeeds.com/bitcoin-price-november-month-end/",
+      "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
+      "https://www.bls.gov/schedule/news_release/current_year.asp"
+    ]
+  }
+}

@@ -1,55 +1,60 @@
 {
-  "date": "2026-11-26",
+  "date": "2026-11-27",
   "overnight": [
-    "미국 증시: 다우 +0.33% · S&P500 −0.25% · 나스닥 −0.62% (현지 26일 휴장)",
-    "엔비디아 −3.91%, AI 수익성 우려 · 트럼프 추가 관세로 장중 급락 뒤 낙폭 줄임",
-    "미 10월 PCE 전년 대비 +3.8% · 근원 +3.3%, 12월 연준 인상 예상 굳어짐",
-    "한은 기준금리 3.00%→3.25%로 0.25%p 인상 (11/26)",
-    "비트코인 약 $60,600 · 이더리움 약 $1,690, 24시간 상승 (11/26 낮 기준)",
-    "달러/원 1,343.2원 (11/25 종가) · 미 10년물 금리 하락"
+    "미국 증시 휴장 (추수감사절) · 오늘 밤 단축장, 28일 03:00 마감",
+    "비트코인 6만달러선 회복 · 이더리움 소폭 상승 (휴장 속 강보합)",
+    "달러/원 1,342.7원 (11/26 종가)",
+    "한은 기준금리 3.25%로 0.25%p 인상 (26일) · 위원 2명은 동결 의견",
+    "미 비트코인 현물 ETF 11월 순유출 53.9억달러, 월간 최대 기록",
+    "12월 FOMC 금리 인상 예상 우세 (CME FedWatch)"
   ],
   "schedule": [
     {
-      "when": "12/02 (수) 00:00",
-      "what": "미국 10월 구인건수(JOLTS) 발표",
+      "when": "11/27 (금) 17:00",
+      "what": "비트코인 11월물 옵션 만기 (데리비트)",
       "impact": 1,
-      "why": "작은 지표"
+      "why": "표에 없는 코인 일정, 낮게 매김"
     },
     {
       "when": "12/04 (금) 22:30",
-      "what": "미국 11월 고용(비농업) 발표",
+      "what": "미국 11월 고용보고서 (비농업)",
       "impact": 4,
       "why": "과거 발표 날 미 국채금리 변동 1.45배"
     },
     {
       "when": "12/08 (화) 22:30",
-      "what": "미국 10월 무역수지 발표",
+      "what": "미국 10월 무역수지",
       "impact": 1,
       "why": "작은 지표"
     },
     {
       "when": "12/10 (목) 04:00",
-      "what": "미국 FOMC 금리 결정",
+      "what": "미국 FOMC 금리 결정 (경제전망 포함)",
       "impact": 4,
-      "why": "과거 결정 날 미국 주식 변동 1.38배"
+      "why": "과거 발표 날 미국 주식 변동 1.38배"
+    },
+    {
+      "when": "12/10 (목) 06시쯤",
+      "what": "브로드컴 4분기 실적 (장 마감 뒤)",
+      "impact": 3,
+      "why": "반도체 대형주 실적, 재지 않음"
     },
     {
       "when": "12/10 (목) 22:30",
-      "what": "미국 11월 CPI 발표",
+      "what": "미국 11월 CPI",
       "impact": 4,
       "why": "과거 발표 날 미국 주식 변동 1.39배"
     }
   ],
   "sources": [
-    "https://view.asiae.co.kr/article/2026112605595166098",
-    "https://biz.heraldcorp.com/article/10949600",
-    "https://supple.kr/news/cmwwp5bc3r2xikwp8bxkfys8n",
-    "https://news.mtn.co.kr/article/2026112523221265175",
-    "https://view.asiae.co.kr/article/2026112601044624904",
-    "https://www.fnnews.com/news/202611260931178752",
-    "https://www.mt.co.kr/economy/2026/11/25/2026112515341082404",
-    "https://www.fnnews.com/news/202611251544208293",
-    "https://www.tokenpost.kr/news/briefing/444692",
-    "https://coinmarketcap.com/coins/"
+    "https://www.asiatoday.co.kr/kn/view.php?key=20261127010010661",
+    "https://view.asiae.co.kr/article/2026112615391282826",
+    "https://www.seoulfn.com/news/articleView.html?idxno=644050",
+    "https://www.huffingtonpost.kr/article/262437",
+    "https://www.e-focus.co.kr/news/articleView.html?idxno=3003398",
+    "https://www.gukjenews.com/news/articleView.html?idxno=3764917",
+    "https://financefeeds.com/bitcoin-price-november-month-end/",
+    "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
+    "https://www.bls.gov/schedule/news_release/current_year.asp"
   ]
 }
